@@ -34,12 +34,12 @@ public class ClientResource {
 	
 	@PostMapping
 	public ResponseEntity<Client> save(@RequestBody Client client){
-		return ResponseEntity.ok().body(client);
+		return ResponseEntity.ok().body(clientService.save(client));
 	}
 	
 	@PostMapping(value = "/salve-all")
 	public ResponseEntity<List<Client>> saveAll(@RequestBody List<Client> list){
-		return ResponseEntity.ok().body(list);
+		return ResponseEntity.ok().body(clientService.saveAll(list));
 	}
 	
 	@DeleteMapping(value = "/{id}")

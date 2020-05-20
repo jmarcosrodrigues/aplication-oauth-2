@@ -9,19 +9,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class PhoneType implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Getter
 	@Setter
 	@Id
@@ -35,5 +32,5 @@ public class PhoneType implements Serializable {
 	@Getter
 	@Setter
 	private Instant modifiedDate;
-  
+	
 }

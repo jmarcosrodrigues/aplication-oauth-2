@@ -48,7 +48,7 @@ public class testConfig implements CommandLineRunner {
 						new PhoneType(null, "Fixo", Instant.now()), new PhoneType(null, "Fixo", Instant.now()))
 				.collect(Collectors.toList());
 
-		Phone p1 = new Phone(null, "062999243838", "personal phone");
+		/*Phone p1 = new Phone(null, "062999243838", "personal phone");
 		Phone p2 = new Phone(null, "062996492144", "My father's phone");
 		Phone p3 = new Phone(null, "062996454128", "personal phone");
 		Phone p4 = new Phone(null, "062985803748", "personal phone operator OI");
@@ -68,7 +68,7 @@ public class testConfig implements CommandLineRunner {
 		
 		
 
-		System.out.println("Telefones " + Arrays.asList(c1, c2, c3, c4, c5, c6));
+		System.out.println("Telefones " + Arrays.asList(c1, c2, c3, c4, c5, c6));*/
 
 		/*
 		 * consumers.get(0).getPhones().addAll(Arrays.asList(phones.get(0),
@@ -82,7 +82,7 @@ public class testConfig implements CommandLineRunner {
 		 */
 
 		phoneTypeRepository.saveAll(phoneTypes);
-		clientRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5, c6));
+		//clientRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5, c6));
 
 	}
 
