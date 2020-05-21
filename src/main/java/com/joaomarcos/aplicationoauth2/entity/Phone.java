@@ -47,5 +47,5 @@ public class Phone implements Serializable {
 	@Getter
 	@Setter
 	private Client client;
-
+	
 }

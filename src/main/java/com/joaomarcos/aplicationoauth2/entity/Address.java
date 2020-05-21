@@ -1,58 +1,57 @@
 package com.joaomarcos.aplicationoauth2.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-	
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Client implements Serializable {
+public class Address implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	
 	@Getter
 	@Setter
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer Id;
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	private Integer id;
 	
 	@Getter
 	@Setter
-	private boolean blocked;
+	private String street;
 	
 	@Getter
 	@Setter
-	private boolean controlClientLimit;
+	private String neighborhood;
 	
 	@Getter
 	@Setter
-	private boolean enabled;
+	private String complement;
 	
 	@Getter
 	@Setter
-	private String name;
-	
-	@Getter
-	@OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
-	private List<Phone> phones = new ArrayList<>();
+	private String streetNumber;
 	
 	@Getter
 	@Setter
-	@OneToOne(mappedBy = "client", cascade = CascadeType.ALL)
-	private Address address;
+	private String zipCode;
 	
+	@Getter
+	@Setter
+	@OneToOne
+	@MapsId
+	private Client client;
 
 }

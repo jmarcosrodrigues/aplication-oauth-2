@@ -1,7 +1,6 @@
 package com.joaomarcos.aplicationoauth2.config;
 
 import java.time.Instant;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -10,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import com.joaomarcos.aplicationoauth2.entity.Client;
-import com.joaomarcos.aplicationoauth2.entity.Phone;
 import com.joaomarcos.aplicationoauth2.entity.PhoneType;
 import com.joaomarcos.aplicationoauth2.entity.User;
 import com.joaomarcos.aplicationoauth2.repository.ClientRepository;
