@@ -51,7 +51,7 @@ public class Client implements Serializable {
 	
 	@Getter
 	@Setter
-	@OneToOne(mappedBy = "client", cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 	
 

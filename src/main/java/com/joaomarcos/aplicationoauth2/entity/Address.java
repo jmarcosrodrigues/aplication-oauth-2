@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,7 +27,7 @@ public class Address implements Serializable {
 	@Getter
 	@Setter
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
 	@Getter
@@ -48,10 +50,9 @@ public class Address implements Serializable {
 	@Setter
 	private String zipCode;
 	
+	@JsonIgnore
 	@Getter
 	@Setter
-	@OneToOne
-	@MapsId
 	private Client client;
 
 }
