@@ -1,5 +1,6 @@
 package com.joaomarcos.aplicationoauth2.service;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,10 +26,12 @@ public class PhoneTypeService {
 	}
 	
 	public PhoneType save(PhoneType phoneType) {
+		phoneType.setModifiedDate(Instant.now());
 		return phoneTypeRepository.save(phoneType);
 	}
 	
 	public List<PhoneType> saveAll(List<PhoneType> list) {
+		list.forEach(phoneType -> phoneType.setModifiedDate(Instant.now()));
 		return phoneTypeRepository.saveAll(list);
 	}
 	

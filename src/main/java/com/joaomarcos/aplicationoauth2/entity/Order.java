@@ -1,16 +1,18 @@
 package com.joaomarcos.aplicationoauth2.entity;
 
 import java.io.Serializable;
+import java.time.Instant;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,8 +24,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "tb_phone")
-public class Phone implements Serializable {
+@Table(name = "tb_order")
+public class Order implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Getter
@@ -34,24 +36,21 @@ public class Phone implements Serializable {
 	
 	@Getter
 	@Setter
-	private String number;
+	private Instant dateRegister;
+	
+	@Getter
+	@Setter
+	private String description;
+	
 
 	@Getter
 	@Setter
-	private String note;
-
-	@JsonIgnore
 	@ManyToOne
-	@JoinColumn(name="id_client")
-	@Getter
-	@Setter
+	@JoinColumn(name = "id_client")
 	private Client client;
 	
-	
 	@Getter
-	@Setter
-	@ManyToOne
-	@JoinColumn(name = "id_phone_type")
-	private PhoneType phoneType;
+	@OneToMany(mappedBy = "id.order", cascade = CascadeType.ALL)
+	private Set<OrderItem> orderItems;
 	
 }

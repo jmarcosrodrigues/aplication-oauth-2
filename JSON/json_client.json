@@ -1,0 +1,69 @@
+[
+	{
+		"blocked": true,
+		"controlClientLimit": false,
+		"enabled": true,
+		"name": "Hellena Emanuelle Silva Nascimento",
+		"phones": [
+			{
+				"number": "062999243840",
+				"note": "folks",
+				"phoneType": {
+					"id": 3
+				}
+			}
+		],
+		"address": {
+			"street": "Rua 65",
+			"neighborhood": "Joaquina da silva Moreira",
+			"complement": "Próximo a UEG",
+			"streetNumber": "SN",
+			"zipCode": "76680000"
+		}
+	},
+	{
+		"blocked": true,
+		"controlClientLimit": false,
+		"enabled": true,
+		"name": "Camila silva de siqueira",
+		"phones": [
+			{
+				"number": "062996454128",
+				"note": "folks",
+				"phoneType": {
+					"id": 3
+				}
+			}
+		],
+		"address": {
+			"street": "Rua 55",
+			"neighborhood": "Joaquina da silva Moreira",
+			"complement": "",
+			"streetNumber": "SN",
+			"zipCode": "76680000"
+		}
+	},
+
+	{
+		"blocked": true,
+		"controlClientLimit": false,
+		"enabled": true,
+		"name": "João Santana do Nascimento",
+		"phones": [
+			{
+				"number": "062996492144",
+				"note": "folks",
+				"phoneType": {
+					"id": 3
+				}
+			}
+		],
+		"address": {
+			"street": "Rua 65",
+			"neighborhood": "Joaquina da silva Moreira",
+			"complement": "",
+			"streetNumber": "SN",
+			"zipCode": "76680000"
+		}
+	}
+]

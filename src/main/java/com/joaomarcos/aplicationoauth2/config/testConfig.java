@@ -1,6 +1,5 @@
 package com.joaomarcos.aplicationoauth2.config;
 
-import java.time.Instant;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -9,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import com.joaomarcos.aplicationoauth2.entity.PhoneType;
 import com.joaomarcos.aplicationoauth2.entity.User;
 import com.joaomarcos.aplicationoauth2.repository.ClientRepository;
 import com.joaomarcos.aplicationoauth2.repository.PhoneTypeRepository;
@@ -40,10 +38,10 @@ public class testConfig implements CommandLineRunner {
 
 		userRepository.saveAll(users);
 
-		List<PhoneType> phoneTypes = Stream
+		/*List<PhoneType> phoneTypes = Stream
 				.of(new PhoneType(null, "Fixo", Instant.now()), new PhoneType(null, "Fixo", Instant.now()),
 						new PhoneType(null, "Fixo", Instant.now()), new PhoneType(null, "Fixo", Instant.now()))
-				.collect(Collectors.toList());
+				.collect(Collectors.toList());*/
 
 		/*Phone p1 = new Phone(null, "062999243838", "personal phone");
 		Phone p2 = new Phone(null, "062996492144", "My father's phone");
@@ -78,7 +76,7 @@ public class testConfig implements CommandLineRunner {
 		 * consumers.get(4).getPhones().addAll(Arrays.asList(phones.get(9)));
 		 */
 
-		phoneTypeRepository.saveAll(phoneTypes);
+		//phoneTypeRepository.saveAll(phoneTypes);
 		//clientRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5, c6));
 
 	}

@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "dateRegister": "2020-05-26T03:00:00Z",
+        "description": "customer order",
+        "client": null,
+        "orderItems": [
+            {
+                "id": {
+                    "product": {
+                        "id": 3,
+                        "name": "Book think better",
+                        "price": 90.0,
+                        "note": "bookstore products"
+                    }
+                },
+                "quantity": 1.0,
+                "price": 1500.6,
+                "note": "celular",
+                "product": {
+                    "id": 3,
+                    "name": "Book think better",
+                    "price": 90.0,
+                    "note": "bookstore products"
+                }
+            },
+            {
+                "id": {
+                    "product": {
+                        "id": 2,
+                        "name": "Cell Phone xeommi 9t",
+                        "price": 1800.0,
+                        "note": "Information product"
+                    }
+                },
+                "quantity": 1.0,
+                "price": 800.0,
+                "note": "eletronicos",
+                "product": {
+                    "id": 2,
+                    "name": "Cell Phone xeommi 9t",
+                    "price": 1800.0,
+                    "note": "Information product"
+                }
+            },
+            {
+                "id": {
+                    "product": {
+                        "id": 1,
+                        "name": "Earphone",
+                        "price": 18.5,
+                        "note": "informatics product"
+                    }
+                },
+                "quantity": 10.0,
+                "price": 10.5,
+                "note": "produto pesado",
+                "product": {
+                    "id": 1,
+                    "name": "Earphone",
+                    "price": 18.5,
+                    "note": "informatics product"
+                }
+            }
+        ]
+    }
+]

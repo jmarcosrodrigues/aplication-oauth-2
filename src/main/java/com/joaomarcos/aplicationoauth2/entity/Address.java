@@ -2,14 +2,12 @@ package com.joaomarcos.aplicationoauth2.entity;
 
 import java.io.Serializable;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -21,6 +19,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "tb_andress")
 public class Address implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -53,6 +52,7 @@ public class Address implements Serializable {
 	@JsonIgnore
 	@Getter
 	@Setter
+	@OneToOne(mappedBy = "address")
 	private Client client;
 
 }

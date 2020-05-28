@@ -29,7 +29,6 @@ public class ClientService {
 
 	public Client save(Client client) {
 		client.getPhones().forEach(phone -> phone.setClient(client));
-		//client.getAddress().setClient(client);
 		return clientRepository.save(client);
 	}
 

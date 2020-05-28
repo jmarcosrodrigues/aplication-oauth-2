@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Earphone",
+        "price": 18.5,
+        "note": "informatics product"
+    },
+    {
+        "id": 2,
+        "name": "Cell Phone xeommi 9t",
+        "price": 1800.0,
+        "note": "Information product"
+    },
+    {
+        "id": 3,
+        "name": "Book think better",
+        "price": 90.0,
+        "note": "bookstore products"
+    },
+    {
+        "id": 4,
+        "name": "Air conditioning",
+        "price": 2000.0,
+        "note": "eletronic product"
+    }
+]

@@ -12,39 +12,39 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.joaomarcos.aplicationoauth2.entity.PhoneType;
-import com.joaomarcos.aplicationoauth2.service.PhoneTypeService;
+import com.joaomarcos.aplicationoauth2.entity.Order;
+import com.joaomarcos.aplicationoauth2.service.OrderService;
 
 @RestController
-@RequestMapping(value = "/phone-types") 
-public class PhoneTypeResource {
+@RequestMapping(value = "/orders") 
+public class OrderResource {
 	
 	@Autowired
-	PhoneTypeService phoneTypeService;
+	OrderService orderService;
 	
 	@GetMapping
-	public ResponseEntity<List<PhoneType>> findAll(){
-		return ResponseEntity.ok().body(phoneTypeService.findAll());
+	public ResponseEntity<List<Order>> findAll(){
+		return ResponseEntity.ok().body(orderService.findAll());
 	}
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<PhoneType> findById(@PathVariable Integer id){
-		return ResponseEntity.ok().body(phoneTypeService.findById(id));
+	public ResponseEntity<Order> findById(@PathVariable Integer id){
+		return ResponseEntity.ok().body(orderService.findById(id));
 	}
 	
 	@PostMapping
-	public ResponseEntity<PhoneType> save(@RequestBody PhoneType phoneType){
-		return ResponseEntity.ok().body(phoneTypeService.save(phoneType));
+	public ResponseEntity<Order> save(@RequestBody Order order){
+		return ResponseEntity.ok().body(orderService.save(order));
 	}
 	
 	@PostMapping(value = "/salve-all")
-	public ResponseEntity<List<PhoneType>> saveAll(@RequestBody List<PhoneType> list){
-		return ResponseEntity.ok().body(phoneTypeService.saveAll(list));
+	public ResponseEntity<List<Order>> saveAll(@RequestBody List<Order> list){
+		return ResponseEntity.ok().body(orderService.saveAll(list));
 	}
 	
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Integer id){
-		phoneTypeService.delete(id);
+		orderService.delete(id);
 		return ResponseEntity.noContent().build();
 	}
 

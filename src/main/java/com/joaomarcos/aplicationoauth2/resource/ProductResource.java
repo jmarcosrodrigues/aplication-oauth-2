@@ -12,39 +12,39 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.joaomarcos.aplicationoauth2.entity.PhoneType;
-import com.joaomarcos.aplicationoauth2.service.PhoneTypeService;
+import com.joaomarcos.aplicationoauth2.entity.Product;
+import com.joaomarcos.aplicationoauth2.service.ProductService;
 
 @RestController
-@RequestMapping(value = "/phone-types") 
-public class PhoneTypeResource {
+@RequestMapping(value = "/products") 
+public class ProductResource {
 	
 	@Autowired
-	PhoneTypeService phoneTypeService;
+	ProductService produtctService;
 	
 	@GetMapping
-	public ResponseEntity<List<PhoneType>> findAll(){
-		return ResponseEntity.ok().body(phoneTypeService.findAll());
+	public ResponseEntity<List<Product>> findAll(){
+		return ResponseEntity.ok().body(produtctService.findAll());
 	}
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<PhoneType> findById(@PathVariable Integer id){
-		return ResponseEntity.ok().body(phoneTypeService.findById(id));
+	public ResponseEntity<Product> findById(@PathVariable Integer id){
+		return ResponseEntity.ok().body(produtctService.findById(id));
 	}
 	
 	@PostMapping
-	public ResponseEntity<PhoneType> save(@RequestBody PhoneType phoneType){
-		return ResponseEntity.ok().body(phoneTypeService.save(phoneType));
+	public ResponseEntity<Product> save(@RequestBody Product product){
+		return ResponseEntity.ok().body(produtctService.save(product));
 	}
 	
 	@PostMapping(value = "/salve-all")
-	public ResponseEntity<List<PhoneType>> saveAll(@RequestBody List<PhoneType> list){
-		return ResponseEntity.ok().body(phoneTypeService.saveAll(list));
+	public ResponseEntity<List<Product>> saveAll(@RequestBody List<Product> list){
+		return ResponseEntity.ok().body(produtctService.saveAll(list));
 	}
 	
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Integer id){
-		phoneTypeService.delete(id);
+		produtctService.delete(id);
 		return ResponseEntity.noContent().build();
 	}
 

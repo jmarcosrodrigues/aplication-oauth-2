@@ -37,7 +37,7 @@ public class ClientResource {
 		return ResponseEntity.ok().body(clientService.save(client));
 	}
 	
-	@PostMapping(value = "/salve-all")
+	@PostMapping(value = "/save-all")
 	public ResponseEntity<List<Client>> saveAll(@RequestBody List<Client> list){
 		return ResponseEntity.ok().body(clientService.saveAll(list));
 	}
